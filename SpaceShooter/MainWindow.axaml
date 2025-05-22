@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SpaceShooter.MainWindow"
+        Width="800"
+        Height="600"
+        KeyDown="OnKeyDown"
+        Title="SpaceShooter">
+	<Canvas Name="gameCanvas" Background="Black">
+		
+		<!-- Игровые объекты -->
+		<Image Name="playerShip" Width="50" Height="50" ZIndex="10"/>
+
+		<!-- UI -->
+		<TextBlock Name="scoreText" Canvas.Left="10" Canvas.Top="10"
+                   Foreground="White" FontSize="20" ZIndex="20"/>
+		<TextBlock Name="livesText" Canvas.Left="10" Canvas.Top="40"
+                   Foreground="White" FontSize="20" ZIndex="20"/>
+		<TextBlock Name="levelText" Canvas.Left="10" Canvas.Top="70"
+                   Foreground="White" FontSize="20" ZIndex="20"/>
+
+		<!-- Сообщения -->
+		<TextBlock Name="gameOverText" Canvas.Left="250" Canvas.Top="250"
+                   Foreground="Red" FontSize="40" Text="GAME OVER"
+                   IsVisible="False" ZIndex="20"/>
+		<TextBlock Name="levelCompleteText" Canvas.Left="200" Canvas.Top="250"
+                   Foreground="Green" FontSize="40" Text="LEVEL COMPLETE!"
+                   IsVisible="False" ZIndex="20"/>
+	</Canvas>
+</Window>
